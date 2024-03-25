@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="track_product.view_product_tmpl_inherit">
+            <field name="name">view_product_tmpl_inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="after">
+                    <page name="page_track_product_1" string="track price">
+                        <field name="lines_track_cost" readonly="1"/>
+                    </page>
+                    <page name="page_track_product_2" string="track cost">
+                        <field name="lines_track_price" readonly="1"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="track_product.action_window_product_template_inherit">
+            <field name="name">product tmpl</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">form</field>
+        </record> 
+    </data>
+</odoo>

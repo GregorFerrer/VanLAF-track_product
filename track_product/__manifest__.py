@@ -12,6 +12,7 @@
 
     'author': "My Company",
     'website': "http://www.yourcompany.com",
+    'application' : True,
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -20,14 +21,20 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'stock', 'product'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/cost_track.xml',
+        'views/price_track.xml',
+        'views/product_template_inherit.xml',
+        'views/menus.xml',
     ],
+
+
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
