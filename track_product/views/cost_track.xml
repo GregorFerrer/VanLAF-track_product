@@ -1,11 +1,10 @@
 <odoo>
   <data>
-
     <record model="ir.ui.view" id="track_product.cost_product_tree">
       <field name="name">track_product.cost_product_tree</field>
       <field name="model">track.costproduct</field>
       <field name="arch" type="xml">
-        <tree create="0" default_order="create_date desc">
+        <tree>
             <field name="create_date" string="Date"/>
             <field name="name"/>
             <field name="product_tmpl"/>

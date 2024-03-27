@@ -8,4 +8,3 @@ class ProductTemplate(models.Model):
     lines_track_cost = fields.One2many('track.costproduct', 'product_tmpl', string="Lines cost" , store="True")
     lines_track_price = fields.One2many('track.priceproduct', 'product_tmpl', string="Lines price" , store="True")
     
-        
